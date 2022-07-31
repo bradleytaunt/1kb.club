@@ -19,3 +19,6 @@ highlighter: none
 exclude:
   - generate.sh
   - README.md
+
+include:
+  - _redirects
