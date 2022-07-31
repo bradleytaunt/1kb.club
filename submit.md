@@ -1,5 +1,6 @@
 ---
 title: Submit
+layout: page
 ---
 
 [&larr; Go home](/)
