@@ -1,0 +1,28 @@
+---
+layout: default
+title: A collection of websites weighing in less than 1kB
+summary: Listing all websites under 1kB in total size
+---
+
+<p>1kB Club is a list of web pages weighing less than 1 kilobyte (1,024 bytes).
+
+
+{% assign websites = site.site_listings | sort: 'size' %}
+<p>Members (<a href="/submit">Submit</a>)
+<table>
+    <thead>
+        <tr>
+            <td align="left">URL</td>
+            <td align="right">Size in bytes</td>
+        </tr>
+    </thead>
+{% for item in websites %}
+    <tbody>
+        <tr>
+            <td><a href="https://{{ item.pageurl }}">{{ item.pageurl }}</a></td>
+            <td align="right"><code>{{ item.size }}</code></td>
+        </tr>
+    </tbody>
+{% endfor %}
+</table>
+
