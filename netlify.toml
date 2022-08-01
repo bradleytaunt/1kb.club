@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "https://1kb.netlify.app/*"
+  to = "https://1kb.club/:splat"
+  status = 301
+  force = true

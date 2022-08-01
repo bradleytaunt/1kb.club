@@ -26,4 +26,4 @@ exclude:
   - README.md
 
 include:
-  - _redirects
+  - netlify.toml
