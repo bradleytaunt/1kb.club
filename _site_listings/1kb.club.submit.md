@@ -1,4 +1,4 @@
 ---
 pageurl: 1kb.club/submit
-size: 927
+size: 699
 ---
