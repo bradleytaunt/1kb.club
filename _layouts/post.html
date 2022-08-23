@@ -2,8 +2,8 @@
 layout: default
 ---
 
-<h2 class="post">{{ page.title }}</h2>
-<time class="post-time" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%a, %d %b %Y" }}</time>
-{{ content }}
+<p>{{ page.name }}
+<p>{{ page.blurb }}
+<p><a href="mailto:{{ page.email }}">{{ page.email }}</a>
 
 

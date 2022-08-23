@@ -11,6 +11,8 @@ author:
 collections:
   site_listings:
     output: false
+  u:
+    output: true
 
 permalink: /blog/:title/
 
@@ -27,3 +29,4 @@ exclude:
 
 include:
   - netlify.toml
+  - ~/
