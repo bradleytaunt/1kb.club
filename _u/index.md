@@ -5,7 +5,7 @@ permalink: /u/index.html
 
 [&larr; Go home](/)
 
-Get your own `tilde` 1kB Club sub-folder domain!
+Get your own `user` 1kB Club sub-folder domain!
 
 1. Fork the 1kB repo
 2. Add a new file under `_u`
