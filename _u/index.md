@@ -1,4 +1,5 @@
 ---
+layout: default
 size: 0
 permalink: /u/index.html
 ---
