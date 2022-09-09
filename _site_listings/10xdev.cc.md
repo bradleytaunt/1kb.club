@@ -1,4 +1,4 @@
 ---
 pageurl: 10xdev.cc
-size: 702
+size: 696
 ---
