@@ -1,4 +1,4 @@
 ---
 pageurl: zrice.net
-size: 854B
+size: 854
 ---
