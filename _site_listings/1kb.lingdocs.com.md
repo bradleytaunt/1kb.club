@@ -1,4 +1,4 @@
 ---
 pageurl: 1kb.lingdocs.com
-size: 518
+size: 500
 ---
