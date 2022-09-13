@@ -1,4 +1,4 @@
 ---
 pageurl: kb.vicjicama.com
-size: 997
+size: 828
 ---
