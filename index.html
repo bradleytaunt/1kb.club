@@ -13,15 +13,15 @@ summary: Listing all websites under 1kB in total size
 <table>
     <thead>
         <tr>
-            <td align="left">URL</td>
-            <td align="right">Size in bytes</td>
+            <td>URL</td>
+            <td>Size in bytes</td>
         </tr>
     </thead>
     <tbody>
         {% for item in websites %}
         <tr>
             <td><a href="https://{{ item.pageurl }}">{{ item.pageurl }}</a></td>
-            <td align="right"><code>{{ item.size }}</code></td>
+            <td><code>{{ item.size }}</code></td>
         </tr>
         {% endfor %}
     </tbody>
