@@ -2,8 +2,8 @@
 <table>
     <thead>
         <tr>
-            <td align="left">URL</td>
-            <td align="right">Size in bytes</td>
+            <td>URL</td>
+            <td>Size in bytes</td>
         </tr>
     </thead>
     <tbody>
@@ -12,7 +12,7 @@
         {% else %}
             <tr>
                 <td><a href="/u/{{ item.pageurl }}">~{{ item.pageurl }}</a></td>
-                <td align="right"><code>{{ item.size }}</code></td>
+                <td><code>{{ item.size }}</code></td>
             </tr>
         {% endif %}
         {% endfor %}
