@@ -1,0 +1,20 @@
+<p>Users (<a href="/u">Add User</a>)
+<table>
+    <thead>
+        <tr>
+            <td>URL</td>
+            <td>Size in bytes</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in users %}
+        {% if item.size == 0 %}
+        {% else %}
+            <tr>
+                <td><a href="/u/{{ item.pageurl }}">~{{ item.pageurl }}</a></td>
+                <td><code>{{ item.size }}</code></td>
+            </tr>
+        {% endif %}
+        {% endfor %}
+    </tbody>
+</table>
