@@ -5,7 +5,7 @@ layout: page
 
 [&larr; Go home](/)
 
-Submit to the 1kB Club
+Submit to the 1kB Club. All source code is [here](https://git.btxx.org/1kb-club)
 
 - [Email a PATCH or suggestion](mailto:1kb-club@patches.btxx.org)
 
