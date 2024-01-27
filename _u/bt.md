@@ -1,8 +1,8 @@
 ---
 layout: post
 name: Brad Taunt
-blurb: I'm a UX designer from Canada.
+blurb: I'm a developer from Canada.
 pageurl: bt
-email: brad@bt.ht
+email: bt@btxx.org
 size: 482
 ---
