@@ -25,6 +25,7 @@ compress_html:
 
 exclude:
   - generate.sh
+  - size.sh
   - README.md
 
 include:
