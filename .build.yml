@@ -1,21 +1,23 @@
 image: alpine/latest
 oauth: pages.sr.ht/PAGES:RW
+packages:
+- go
+- hut
+- ruby-full
+- ruby-dev
 environment:
 site: 1kb.club
 sources:
 - https://git.sr.ht/~bt/1kb-club
 tasks:
-- build : |
-    if [ "$SRHT_BRANCH" = "deploy" ]; then
-      echo "On deploy branch, proceeding with package installation and build...";
-      apk add --no-cache go hut ruby-full ruby-dev
-      sudo gem install bundler
-      cd 1kb-club
-      sudo bundle install
-      sudo bundle exec jekyll build
-      cd 1kb-club/_site
-      tar -cvz . > ../../site.tar.gz
-      hut pages publish -d 1kb.club site.tar.gz
-    else
-      echo "Not on deploy branch, skipping build and upload.";
-    fi
+- install-bundler: |
+    sudo gem install bundler
+- build: |
+    cd 1kb-club
+    sudo bundle install
+    sudo bundle exec jekyll build
+- package: |
+    cd 1kb-club/_site
+    tar -cvz . > ../../site.tar.gz
+- upload: |
+    hut pages publish -d 1kb.club site.tar.gz
