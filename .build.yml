@@ -13,7 +13,8 @@ sources:
 tasks:
 - name: build-1kb
     steps:
-      - if [ "$SRHT_BRANCH" = "deploy" ]; then
+      - |
+        if [ "$SRHT_BRANCH" = "deploy" ]; then
           sudo gem install bundler
           cd 1kb-club
           sudo bundle install
