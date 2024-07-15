@@ -1,10 +1,5 @@
 image: alpine/latest
 oauth: pages.sr.ht/PAGES:RW
-packages:
-- go
-- hut
-- ruby-full
-- ruby-dev
 environment:
 site: 1kb.club
 sources:
@@ -12,6 +7,8 @@ sources:
 tasks:
 - build : |
     if [ "$SRHT_BRANCH" = "deploy" ]; then
+      echo "On deploy branch, proceeding with package installation and build...";
+      apk add --no-cache go hut ruby-full ruby-dev
       sudo gem install bundler
       cd 1kb-club
       sudo bundle install
