@@ -13,11 +13,17 @@ tasks:
 - install-bundler: |
     sudo gem install bundler
 - build: |
-    cd 1kb-club
-    sudo bundle install
-    sudo bundle exec jekyll build
+    - if [ "$SRHT_BRANCH" = "deploy" ]; then
+        cd 1kb-club
+        sudo bundle install
+        sudo bundle exec jekyll build
+      fi
 - package: |
-    cd 1kb-club/_site
-    tar -cvz . > ../../site.tar.gz
+    - if [ "$SRHT_BRANCH" = "deploy" ]; then
+        cd 1kb-club/_site
+        tar -cvz . > ../../site.tar.gz
+      fi
 - upload: |
-    hut pages publish -d 1kb.club site.tar.gz
+    - if [ "$SRHT_BRANCH" = "deploy" ]; then
+        hut pages publish -d 1kb.club site.tar.gz
+      fi
