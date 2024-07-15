@@ -11,17 +11,15 @@ site: 1kb.club
 sources:
 - https://git.sr.ht/~bt/1kb-club
 tasks:
-- name: build-1kb
-    steps:
-      - |
-        if [ "$SRHT_BRANCH" = "deploy" ]; then
-          sudo gem install bundler
-          cd 1kb-club
-          sudo bundle install
-          sudo bundle exec jekyll build
-          cd 1kb-club/_site
-          tar -cvz . > ../../site.tar.gz
-          hut pages publish -d 1kb.club site.tar.gz
-        else
-          echo "Not on deploy branch, skipping build and upload.";
-        fi
+- build : |
+    if [ "$SRHT_BRANCH" = "deploy" ]; then
+      sudo gem install bundler
+      cd 1kb-club
+      sudo bundle install
+      sudo bundle exec jekyll build
+      cd 1kb-club/_site
+      tar -cvz . > ../../site.tar.gz
+      hut pages publish -d 1kb.club site.tar.gz
+    else
+      echo "Not on deploy branch, skipping build and upload.";
+    fi
