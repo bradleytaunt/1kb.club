@@ -6,24 +6,21 @@ packages:
 - ruby-full
 - ruby-dev
 environment:
+  - DEPLOY_ENV=production
 site: 1kb.club
 sources:
 - https://git.sr.ht/~bt/1kb-club
 tasks:
-- install-bundler: |
-    sudo gem install bundler
-- build: |
-    - if [ "$SRHT_BRANCH" = "deploy" ]; then
-        cd 1kb-club
-        sudo bundle install
-        sudo bundle exec jekyll build
-      fi
-- package: |
-    - if [ "$SRHT_BRANCH" = "deploy" ]; then
-        cd 1kb-club/_site
-        tar -cvz . > ../../site.tar.gz
-      fi
-- upload: |
-    - if [ "$SRHT_BRANCH" = "deploy" ]; then
-        hut pages publish -d 1kb.club site.tar.gz
-      fi
+- name: build-1kb
+    steps:
+      - if [ "$SRHT_BRANCH" = "deploy" ]; then
+          sudo gem install bundler
+          cd 1kb-club
+          sudo bundle install
+          sudo bundle exec jekyll build
+          cd 1kb-club/_site
+          tar -cvz . > ../../site.tar.gz
+          hut pages publish -d 1kb.club site.tar.gz
+        else
+          echo "Not on deploy branch, skipping build and upload.";
+        fi
