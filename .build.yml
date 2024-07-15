@@ -6,7 +6,6 @@ packages:
 - ruby-full
 - ruby-dev
 environment:
-  - DEPLOY_ENV=production
 site: 1kb.club
 sources:
 - https://git.sr.ht/~bt/1kb-club
