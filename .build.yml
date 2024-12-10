@@ -15,5 +15,5 @@ tasks:
     sudo bundle install
     sudo bundle exec jekyll build
 - deploy: |
-    cd 1mb-club
+    cd 1kb-club
     rsync --rsh="ssh -o StrictHostKeyChecking=no -i ~/.ssh/07201d32-1451-4a8f-9bff-ce8b2232c67d" -rzP _site/ bt@1kb.club:/var/www/1kb.club
