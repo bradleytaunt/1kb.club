@@ -1,14 +1,12 @@
-image: alpine/latest
-oauth: pages.sr.ht/PAGES:RW
+image: debian/stable
 packages:
-- go
-- hut
 - ruby-full
 - ruby-dev
-environment:
-site: 1kb.club
+- rsync
 sources:
 - https://git.sr.ht/~bt/1kb-club
+secrets:
+- 07201d32-1451-4a8f-9bff-ce8b2232c67d
 tasks:
 - install-bundler: |
     sudo gem install bundler
@@ -16,8 +14,6 @@ tasks:
     cd 1kb-club
     sudo bundle install
     sudo bundle exec jekyll build
-- package: |
-    cd 1kb-club/_site
-    tar -cvz . > ../../site.tar.gz
-- upload: |
-    hut pages publish -d 1kb.club site.tar.gz
+- deploy: |
+    cd 1mb-club
+    rsync --rsh="ssh -o StrictHostKeyChecking=no -i ~/.ssh/07201d32-1451-4a8f-9bff-ce8b2232c67d" -rzP _site/ bt@1kb.club:/var/www/1kb.club
