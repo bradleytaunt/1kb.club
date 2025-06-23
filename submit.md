@@ -5,9 +5,9 @@ layout: page
 
 [&larr; Go home](/)
 
-Submit to the 1kB Club. All source code is [here](https://git.sr.ht/~bt/1kb-club)
+Submit to the 1kB Club. All source code is [here](https://codeberg.org/btxx/1kb-club)
 
-- [Submit a patch](https://lists.sr.ht/~bt/1kb-club-devel)
+- [Submit a PR](https://codeberg.org/btxx/1kb-club/pulls)
 
 If patching, use the template below when creating your site file (size in bytes):
 
