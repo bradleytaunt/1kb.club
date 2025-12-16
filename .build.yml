@@ -4,7 +4,7 @@ packages:
 - ruby-full
 - ruby-dev
 environment:
-site: 1kb.club
+  site: 1kb.club
 sources:
   - https://git.sr.ht/~bt/1kb-club
 tasks:
@@ -12,7 +12,7 @@ tasks:
     sudo gem install bundler
 - build: |
     cd 1kb-club
-    bundle install
+    sudo bundle install
     bundle exec jekyll build
 - package: |
     cd 1kb-club/_site
