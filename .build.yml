@@ -1,21 +1,24 @@
 image: debian/stable
 oauth: pages.sr.ht/PAGES:RW
 packages:
+- hut
 - ruby-full
 - ruby-dev
 environment:
+  repo: 1kb-club
   site: 1kb.club
-sources:
-  - https://git.sr.ht/~bt/1kb-club
 tasks:
 - install-bundler: |
+    cd $repo
     sudo gem install bundler
-- build: |
-    cd 1kb-club
+- jekyll-build: |
+    cd $repo
     sudo bundle install
-    bundle exec jekyll build
-- package: |
-    cd 1kb-club/_site
-    tar -cvz . > ../../site.tar.gz
-- upload: |
-    acurl -f https://pages.sr.ht/publish/$site -Fcontent=@site.tar.gz
+    sudo bundle exec jekyll build
+- package-site: |
+    cd $repo/_site
+    tar -cvzh . > ../site.tar.gz
+- deploy: |
+    hut pages publish -d $site --site-config $repo/siteconfig.json $repo/site.tar.gz
+- deploy-www: |
+    hut pages publish -d www.$site --site-config $repo/siteconfig.json $repo/site.tar.gz
