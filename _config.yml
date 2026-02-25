@@ -16,6 +16,9 @@ collections:
 
 permalink: /blog/:title/
 
+plugins:
+  - jekyll-gzip
+
 highlighter: none
 
 compress_html:
