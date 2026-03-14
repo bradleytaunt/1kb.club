@@ -7,15 +7,15 @@ layout: page
 
 Submit to the 1kB Club. All source code is [here](https://git.sr.ht/~bt/1kb-club)
 
-- [Submit a patch](https://lists.sr.ht/~bt/1kb-club-devel)
+1. Run your website through [Cloudflare's URL Scanner](https://radar.cloudflare.com/scan)
+2. Get your **Bytes total** number under the **Network** heading
+3. [Submit a patch](https://lists.sr.ht/~bt/1kb-club-devel)
 
-If patching, use the template below when creating your site file (size in bytes):
+When patching, edit the main `_data/sites.yml` file and include your own website like so:
 
 ```
----
-pageurl: domain.com
-size: 300
----
+- domain: 1kb.your.website
+  size: 628
 ```
 
-All web pages are tested manually through the Firefox Network tab.
+Don't worry about where you place this new addition inside of `_data/sites.yml`. This will be automatically reordered once pushed to `master`.
