@@ -3,4 +3,5 @@ _site
 vendor
 .bundle
 .jekyll-cache
+.ruby-version
 .DS_Store
