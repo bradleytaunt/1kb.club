@@ -7,7 +7,7 @@ layout: page
 
 Submit to the 1kB Club. All source code is [here](https://git.sr.ht/~bt/1kb-club)
 
-1. Run your website through [Cloudflare's URL Scanner](https://radar.cloudflare.com/scan)
+1. Run your website through [Debugbear's URL Scanner](https://www.debugbear.com/test/website-speed)
 2. Get your **Bytes total** number under the **Network** heading
 3. [Submit a patch](https://lists.sr.ht/~bt/1kb-club-devel)
 
