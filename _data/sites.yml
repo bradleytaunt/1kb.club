@@ -49,6 +49,9 @@
 - domain: ephemerae.xyz
   size: 707
 
+- domain: fegis.net
+  size: 990
+
 - domain: halleyhares.ltd
   size: 941
 
@@ -114,6 +117,3 @@
 
 - domain: zenofpython.org
   size: 1022
-
-- domain: fegis.net
-  size: 990
