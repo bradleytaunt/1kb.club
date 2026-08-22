@@ -43,17 +43,11 @@
 - domain: cv.btxx.org
   size: 363
 
-- domain: demo.gumx.cc
-  size: 392
-
 - domain: ephemerae.xyz
   size: 707
 
 - domain: fegis.net
   size: 975
-
-- domain: halleyhares.ltd
-  size: 941
 
 - domain: hen.re
   size: 1009
@@ -63,9 +57,6 @@
 
 - domain: hi.emi.industries
   size: 990
-
-- domain: hi.gy
-  size: 622
 
 - domain: hi.mrkrk.me
   size: 962
@@ -88,17 +79,11 @@
 - domain: korayer.de
   size: 754
 
-- domain: mirror.forum
-  size: 655
-
 - domain: myr.sh
   size: 685
 
 - domain: pba.im/200B
   size: 193
-
-- domain: pussthecat.org/1
-  size: 565
 
 - domain: rafhei0.netlify.app/1kb
   size: 1010
