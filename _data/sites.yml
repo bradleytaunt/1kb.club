@@ -1,20 +1,8 @@
-- domain: 1k.ekallevig.com
-  size: 697
-
-- domain: 1k.gumx.cc
-  size: 460
-
 - domain: 1k.lom.me
   size: 628
 
-- domain: 1kb.alexi.sh
-  size: 832
-
 - domain: 1kb.andrian.io
   size: 994
-
-- domain: 1kb.cleberg.net/#g
-  size: 1022
 
 - domain: 1kb.club/submit
   size: 699
@@ -24,9 +12,6 @@
 
 - domain: 1kb.lejtzen.dev
   size: 979
-
-- domain: 1kb.ng5p.com
-  size: 910
 
 - domain: 5.vg
   size: 555
@@ -42,9 +27,6 @@
 
 - domain: cv.btxx.org
   size: 363
-
-- domain: ephemerae.xyz
-  size: 707
 
 - domain: fegis.net
   size: 975
@@ -76,20 +58,11 @@
 - domain: kb.vicjicama.com
   size: 828
 
-- domain: korayer.de
-  size: 754
-
-- domain: myr.sh
-  size: 685
-
 - domain: pba.im/200B
   size: 193
 
 - domain: rafhei0.netlify.app/1kb
   size: 1010
-
-- domain: riv.ar/en/lite
-  size: 923
 
 - domain: roomroofroot.github.io/pages/1kb/
   size: 855
@@ -102,6 +75,3 @@
 
 - domain: ultralite.sharavananpa.dev
   size: 620
-
-- domain: zenofpython.org
-  size: 1022
