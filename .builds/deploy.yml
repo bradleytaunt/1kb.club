@@ -1,7 +1,8 @@
-image: netbsd/latest
+image: alpine/edge
 packages:
-- ruby
-- rsync
+- hut
+- ruby-full
+- ruby-dev
 secrets:
   - 4494165b-6f9a-4659-9277-110124654c4c
   - 50c6ddb9-c241-40e0-beb2-2d090b79f74d
@@ -10,7 +11,6 @@ environment:
   dest: /var/www/1kb.club
   server: 199.180.249.182
   BUNDLE_PATH: vendor/bundle
-  JEKYLL_ENV: production
 submitter:
   git.sr.ht:
     enabled: true
@@ -19,13 +19,9 @@ submitter:
 tasks:
 - ssh-setup: |
     ssh-keyscan -H -4 $server >> ~/.ssh/known_hosts
-- deps: |
-    export PATH="$(gem environment user_gemdir)/bin:$PATH"
+- build: |
     cd $repo
     bundle install
-- build: |
-    export PATH="$(gem environment user_gemdir)/bin:$PATH"
-    cd $repo
     bundle exec jekyll build
 - deploy: |
     cd $repo
